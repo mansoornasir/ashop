@@ -4,9 +4,9 @@ const mysql = require("mysql");
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    database: "ashopoma_a-shop",
-    user: "ashopoma_a_shop",
-    password: "MBcv7CRpKET7mbc",
+    database: "ashop",
+    user: "root",
+    password: "",
     connectionLimit: 15,
         queueLimit: 30,
         acquireTimeout: 1000000
@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
     if (err) {
       // mysqlErrorHandling(connection, err);
       console.log(
-        "\n\t *** Cannot establish a connection with the database. ***"
+        "\n\t *** Cannot establish a connection with the database. ***",err
       );
   
       // connection = reconnect(connection);
