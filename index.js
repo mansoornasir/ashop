@@ -44,7 +44,10 @@ var fs = require("fs");
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "./build")));
+// add middlewares
+// const root = require('path').join(__dirname, 'build');
+// app.use(express.static(root));
+
 
 app.get("/api/images/:cattegory/:image", (req, res) => {
   var { cattegory, image } = req.params;
